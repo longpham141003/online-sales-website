@@ -1,0 +1,423 @@
+/* General Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background-color: #0073d2;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-options {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 12px;
+  margin-right: 300px;
+}
+
+.account-options span {
+  margin-left: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.account-options span:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: white;
+  opacity: 0.25;
+}
+
+.logo-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  margin-left: 160px;
+  margin-right: 130px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 550px;
+  margin-right: 10px;
+  margin-left: 100px;
+}
+
+.search-bar input {
+  padding: 5px;
+  flex-grow: 1;
+  border: none;
+}
+
+.search-bar .categories {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  width: 140px;
+}
+
+.search-bar .categories option {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background-color: yellow;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.nav-bar {
+  background-color: #005bb5;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.nav-bar a,
+.nav-bar .offer {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.nav-bar a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: white;
+  opacity: 0.5;
+}
+
+.nav-bar .tag {
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.nav-bar .tag.hot {
+  background-color: #ff4b4b;
+}
+
+.nav-bar .tag.new {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.offer {
+  background-color: #005bb5;
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.cart-icon {
+  position: relative;
+  padding: 10px;
+  background-color: #005bb5;
+  border-radius: 5px 0 0 5px;
+  font-size: 10px;
+  height: 20px;
+}
+
+.cart-icon i {
+  font-size: 16px;
+}
+
+.cart-icon .cart-count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: yellow;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.cart-info {
+  background-color: #005bb5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  white-space: nowrap;
+  font-size: 11px;
+  height: 20px;
+}
+
+.info-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 1200px;
+}
+.info-content h2 {
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+.tabcontent h3 {
+  color: #0073e6;
+  margin-bottom: 20px;
+}
+.account-info, .order-info {
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: black; /* Steel blue */
+  height: auto;
+}
+
+.account-info h2, .order-info h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #57a0a2;
+  border-bottom: 2px solid #57a0a2;
+  padding-bottom: 5px;
+}
+
+.edit-info {
+  font-size: 14px;
+  color: #57a0a2;
+  cursor: pointer;
+}
+
+.edit-info i {
+  margin-right: 5px;
+}
+
+.account-info p, .order-info h3 {
+  margin: 10px 0;
+}
+
+.edit-button {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: rgb(207, 100, 100); /* Màu chữ */
+  font-size: 16px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ chuột */
+  display: inline-block; /* Hiển thị inline-block để căn giữa */
+}
+
+.edit-input {
+  display: block;
+  width: calc(100% - 40px); /* Trừ đi phần của nút đổi */
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.save-button {
+  align-self: flex-end;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #57a0a2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.account-info-footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+/* Styling for the table */
+.pending-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.pending-orders-table th,
+.pending-orders-table td {
+  border: 1px solid #dddddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.pending-orders-table th {
+  background-color: #0073e6;
+  color: white;
+  font-weight: bold;
+}
+
+.pending-orders-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.pending-orders-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.pending-orders-table td {
+  color: #555555;
+}
+
+.pending-orders-table td i {
+  margin-right: 5px;
+}
+
+.pending-orders-table td a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.pending-orders-table td a:hover {
+  text-decoration: underline;
+}
+
+/* Style the tab */
+.info-tab {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.info-tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.info-tab .tablinks {
+  background-color: #f1f1f1;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: background-color 0.3s;
+}
+
+.info-tab .tablinks:hover {
+  background-color: #ddd;
+}
+
+.info-tab .tablinks.active {
+  background-color: #ccc;
+}
+
+.modal {
+  display: flex; /* Hiển thị modal dưới dạng flex */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  position: fixed; /* Ở vị trí cố định */
+  z-index: 1000; /* Đảm bảo modal ở trên cùng */
+  left: 0;
+  top: 0;
+  width: 100%; /* Chiều rộng đầy đủ */
+  height: 100%; /* Chiều cao đầy đủ */
+  background-color: rgba(0,0,0,0.4); /* Màu đen với độ mờ */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  max-width: 600px; /* Đảm bảo modal không quá rộng */
+  max-height: 90%; /* Đảm bảo modal không quá cao */
+  overflow-y: auto; /* Cuộn theo chiều dọc nếu nội dung quá nhiều */
+  position: relative;
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#order-products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#order-products-table th,
+#order-products-table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#order-products-table th {
+  background-color: #0073e6;
+  color: white;
+}
+
+#order-products-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#order-products-table tr:hover {
+  background-color: #f1f1f1;
+}

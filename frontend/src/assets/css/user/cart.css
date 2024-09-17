@@ -1,0 +1,383 @@
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background-color: #0073d2;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-options {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 12px;
+  margin-right: 300px;
+}
+
+.account-options span {
+  margin-left: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.account-options span:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: white;
+  opacity: 0.25;
+}
+
+.logo-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  margin-left: 160px;
+  margin-right: 130px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 550px;
+  margin-right: 10px;
+  margin-left: 100px;
+}
+
+.search-bar input {
+  padding: 5px;
+  flex-grow: 1;
+  border: none;
+}
+
+.search-bar .categories {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  width: 140px;
+}
+
+.search-bar .categories option {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background-color: yellow;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.nav-bar {
+  background-color: #005bb5;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.nav-bar a,
+.nav-bar .offer {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.nav-bar a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: white;
+  opacity: 0.5;
+}
+
+.nav-bar .tag {
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.nav-bar .tag.hot {
+  background-color: #ff4b4b;
+}
+
+.nav-bar .tag.new {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.offer {
+  background-color: #005bb5;
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.cart-icon {
+  position: relative;
+  padding: 10px;
+  background-color: #005bb5;
+  border-radius: 5px 0 0 5px;
+  font-size: 10px;
+  height: 20px;
+}
+
+.cart-icon i {
+  font-size: 16px;
+}
+
+.cart-icon .cart-count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: yellow;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.cart-info {
+  background-color: #005bb5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  white-space: nowrap;
+  font-size: 11px;
+  height: 20px;
+}
+
+
+.cart-main-content {
+  margin: 30px 150px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  color: #555555;
+}
+
+.cart-table th {
+  color: #333333;
+  border-bottom: 1px solid #ddd; /* Giữ đường kẻ dưới các tiêu đề */
+}
+
+.cart-table tbody tr {
+  border-bottom: none;
+}
+
+.cart-edit-column {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Đường viền mờ cho cột Edit */
+}
+.cart-edit-column a {
+  font-size: 12px;
+  text-decoration: underline;
+  color: #0073d2;
+}
+
+.cart-product-name {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 49px;
+  line-height: 33px;
+}
+
+.cart-product-name span {
+  font-weight: bold;
+  color: #333333;
+}
+
+.cart-product-image {
+  width: 100px; /* Kích thước lớn hơn cho hình ảnh */
+  height: 100px;
+  object-fit: cover;
+}
+
+.cart-rating {
+  font-size: 12px;
+  color: #888;
+}
+
+.cart-quantity-input {
+  width: 50px;
+  height: 27px;
+}
+
+.cart-table a {
+  color: #0073d2;
+  text-decoration: none;
+}
+
+.cart-product-color {
+  color: green;
+  font-size: 12px;
+}
+.cart-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.cart-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.continue-shopping {
+  background-color: #007bff;
+  color: white;
+}
+
+.update-cart {
+  background-color: #007bff;
+  color: white;
+}
+
+.cart-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.cart-column {
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.cart-column h3 {
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.cart-column p {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.cart-column form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-column form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.cart-column form select,
+.cart-column form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart-column form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.get-quote {
+  background-color: #007bff;
+  color: white;
+}
+
+.apply-coupon {
+  background-color: #007bff;
+  color: white;
+}
+
+.proceed-checkout {
+  background-color: #ffc107;
+  color: black;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.cart-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-details th,
+.cart-details td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-details th {
+  background-color: #f9f9f9;
+}
+
+.cart-details tbody tr:hover {
+  background-color: #f1f1f1;
+}

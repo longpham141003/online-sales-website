@@ -1,0 +1,21 @@
+export const ROUTERS = {
+  ADMIN: { 
+    ORDERMANAGEMENT: "/admin/ordermanagement",
+    CUSTOMERMANAGEMENT: "/admin/customermanagement",
+    ACCOUNTMANAGEMENT:"/admin/accountmanagement",
+    CATEGORYMANAGEMENT: "/admin/categorymanagement",
+    PRODUCTMANAGEMENT:"/admin/productmanagement",
+    PERSONNELMANAGEMENT:"/admin/personnelmanagement",
+    SUPPLIERMANAGER:"/admin/suppliermanager",
+    REVENUEREPORT:"/admin/revenuereport",
+    DASHBOARD:"/admin/dashboard",
+    ADDPRODUCT:"/admin/addproduct",
+    ADDEMPLOYEE:"/admin/addemployee",
+    ADDSUPPLIER:"/admin/addsupplier",
+    ADDORDER:"/admin/addorder",
+    ADMINLOGIN:"/admin/adminlogin",
+    ADDMAINCATEGORY:"/admin/addmaincategory",
+    ADDEXTRACATEGORY:"/admin/addextracategory",
+    ADDDETAILCATEGORY:"/admin/adddetailcategory",
+  },
+};

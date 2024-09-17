@@ -1,0 +1,428 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+.body-content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.admin {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  height: 100vh;
+}
+
+.left-bar {
+  background-color: #0a2342;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.left-bar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.left-bar::-webkit-scrollbar-track {
+  background: #001c40;
+}
+
+.left-bar::-webkit-scrollbar-thumb {
+  background-color: #212529;
+  border-radius: 10px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-info img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  background-color: white;
+}
+
+.user-info h4 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.user-info p {
+  margin: 0;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 14px;
+}
+
+.menu-item:hover {
+  background-color: #34568b;
+}
+
+.menu-item i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.menu-item.active {
+  background-color: #ffd700;
+  color: black;
+}
+
+.right-bar {
+  padding: 0;
+  overflow-y: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-bar:hover {
+  overflow-y: scroll;
+}
+
+.header-right-bar {
+  background-color: #0a2342;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.website-link {
+  color: #ffffff;
+  font-size: 13px;
+  margin-left: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.logout-button {
+  background-color: #ffd700;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.logout-button i {
+  font-size: 18px;
+  color: #0a2342;
+}
+
+.content {
+  margin: 6px 20px;
+}
+
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.time .title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #002855;
+  position: relative;
+}
+
+.time .title::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100%;
+  width: 5px;
+  background-color: #ffd700;
+  border-radius: 0 5px 5px 0;
+}
+
+.time .datetime {
+  font-size: 14px;
+  color: #333333;
+}
+
+.info-revenue {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cột chia đều */
+  gap: 20px; /* Khoảng cách giữa các mục */
+  width: 100%; /* Chiếm hết chiều rộng của cha */
+}
+
+.item {
+  background-color: #ffffff; /* Màu nền của mỗi item */
+  border-radius: 10px; /* Bo tròn các góc */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  display: flex; /* Sử dụng Flexbox để căn giữa nội dung */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding: 20px; /* Khoảng cách bên trong giữa nội dung và viền */
+  transition: transform 0.2s ease-in-out;
+  width: 100%; /* Chiếm hết chiều rộng của cột */
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến width */
+}
+
+.item:hover {
+  transform: translateY(-5px); /* Hiệu ứng khi hover */
+}
+
+.item i {
+  font-size: 40px; /* Kích thước icon */
+  margin-right: 20px; /* Khoảng cách giữa icon và nội dung văn bản */
+}
+
+.item .info-text {
+  display: flex;
+  flex-direction: column; /* Xếp chữ theo cột */
+}
+
+.item .info-text h4 {
+  margin: 0;
+  font-size: 16px; /* Kích thước tiêu đề */
+  color: #dc3545; /* Màu đỏ cho tiêu đề */
+}
+
+.item .info-text span {
+  font-size: 14px; /* Kích thước văn bản */
+  color: #333; /* Màu văn bản */
+}
+
+/* Màu nền và màu icon cho từng item */
+.item:nth-child(1) i {
+  background-color: #b7e1cd;
+  color: #28a745;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item:nth-child(2) i {
+  background-color: #c5d9f1;
+  color: #007bff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item:nth-child(3) i {
+  background-color: #ffecb3;
+  color: #f39c12;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item:nth-child(4) i {
+  background-color: #f8d7da;
+  color: #dc3545;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item:nth-child(5) i {
+  background-color: #b7e1cd;
+  color: #28a745;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item:nth-child(6) i {
+  background-color: #c5d9f1;
+  color: #007bff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item:nth-child(7) i {
+  background-color: #ffecb3;
+  color: #f39c12;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.item:nth-child(8) i {
+  background-color: #f8d7da;
+  color: #dc3545;
+  padding: 15px;
+  border-radius: 10px;
+}
+.product-selling {
+  background-color: #ffffff; /* Màu nền */
+  padding: 10px 20px; /* Khoảng cách giữa các nội dung và viền */
+  border-radius: 10px; /* Bo tròn các góc */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.section-title {
+  font-size: 20px; /* Kích thước chữ của tiêu đề */
+  font-weight: bold; /* Đậm chữ tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  color: #002855; /* Màu chữ của tiêu đề */
+  border-bottom: 2px solid #ffd700; /* Đường kẻ màu vàng phía dưới tiêu đề */
+  padding-bottom: 10px; /* Khoảng cách giữa tiêu đề và đường kẻ */
+}
+
+.selling-table {
+  width: 100%;
+  border-collapse: collapse; /* Bỏ khoảng cách giữa các ô */
+}
+
+.selling-table th, .selling-table td {
+  padding: 12px; /* Khoảng cách giữa nội dung và viền ô */
+  text-align: left; /* Căn chỉnh nội dung bên trái */
+  font-size: 14px; /* Kích thước chữ */
+  color: #333; /* Màu chữ */
+  border-bottom: 1px solid #ddd; /* Đường kẻ dưới các ô */
+}
+
+.selling-table th {
+  background-color: #f9f9f9; /* Màu nền của tiêu đề cột */
+  font-weight: bold; /* Đậm chữ của tiêu đề cột */
+}
+
+.selling-table tbody tr:hover {
+  background-color: #f1f1f1; /* Màu nền khi hover lên hàng */
+}
+.total-order {
+  background-color: #ffffff; /* Màu nền */
+  padding: 20px; /* Khoảng cách giữa các nội dung và viền */
+  border-radius: 10px; /* Bo tròn các góc */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.total-order .section-title {
+  font-size: 20px; /* Kích thước chữ của tiêu đề */
+  font-weight: bold; /* Đậm chữ tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  color: #002855; /* Màu chữ của tiêu đề */
+  border-bottom: 2px solid #ffd700; /* Đường kẻ màu vàng phía dưới tiêu đề */
+  padding-bottom: 10px; /* Khoảng cách giữa tiêu đề và đường kẻ */
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse; /* Bỏ khoảng cách giữa các ô */
+}
+
+.order-table th, .order-table td {
+  padding: 12px; /* Khoảng cách giữa nội dung và viền ô */
+  text-align: left; /* Căn chỉnh nội dung bên trái */
+  font-size: 14px; /* Kích thước chữ */
+  color: #333; /* Màu chữ */
+  border-bottom: 1px solid #ddd; /* Đường kẻ dưới các ô */
+}
+
+.order-table th {
+  background-color: #f9f9f9; /* Màu nền của tiêu đề cột */
+  font-weight: bold; /* Đậm chữ của tiêu đề cột */
+}
+
+.order-table tfoot td {
+  font-weight: bold; /* Đậm chữ cho hàng tổng cộng */
+}
+
+.order-table tbody tr:hover {
+  background-color: #f1f1f1; /* Màu nền khi hover lên hàng */
+}
+.product-sold-out, .new-staff {
+  background-color: #ffffff; /* Màu nền */
+  padding: 20px; /* Khoảng cách giữa các nội dung và viền */
+  border-radius: 10px; /* Bo tròn các góc */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  margin-top: 20px; /* Khoảng cách phía trên */
+}
+
+.section-title {
+  font-size: 20px; /* Kích thước chữ của tiêu đề */
+  font-weight: bold; /* Đậm chữ tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  color: #002855; /* Màu chữ của tiêu đề */
+  border-bottom: 2px solid #ffd700; /* Đường kẻ màu vàng phía dưới tiêu đề */
+  padding-bottom: 10px; /* Khoảng cách giữa tiêu đề và đường kẻ */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Bỏ khoảng cách giữa các ô */
+}
+
+th, td {
+  padding: 12px; /* Khoảng cách giữa nội dung và viền ô */
+  text-align: left; /* Căn chỉnh nội dung bên trái */
+  font-size: 14px; /* Kích thước chữ */
+  color: #333; /* Màu chữ */
+  border-bottom: 1px solid #ddd; /* Đường kẻ dưới các ô */
+}
+
+th {
+  background-color: #f9f9f9; /* Màu nền của tiêu đề cột */
+  font-weight: bold; /* Đậm chữ của tiêu đề cột */
+}
+
+.product-image {
+  width: 50px; /* Độ rộng của ảnh */
+  height: auto;
+  border-radius: 5px; /* Bo tròn các góc ảnh */
+}
+
+.status-label {
+  background-color: #f8d7da; /* Màu nền */
+  color: #dc3545; /* Màu chữ */
+  padding: 5px 10px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo tròn các góc */
+  font-weight: bold; /* Đậm chữ */
+}
+.chart-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Khoảng cách giữa hai biểu đồ */
+  margin-top: 20px;
+}
+
+.monthly-data, .sales-stats {
+  background-color: #ffffff; /* Màu nền */
+  padding: 20px; /* Khoảng cách giữa các nội dung và viền */
+  border-radius: 10px; /* Bo tròn các góc */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+  width: 48%; /* Chiều rộng mỗi biểu đồ */
+}
+
+.section-title {
+  font-size: 20px; /* Kích thước chữ của tiêu đề */
+  font-weight: bold; /* Đậm chữ tiêu đề */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  color: #002855; /* Màu chữ của tiêu đề */
+  border-bottom: 2px solid #ffd700; /* Đường kẻ màu vàng phía dưới tiêu đề */
+  padding-bottom: 10px; /* Khoảng cách giữa tiêu đề và đường kẻ */
+}
+

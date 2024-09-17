@@ -1,0 +1,498 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #f5f5f5;
+}
+
+.header {
+  background-color: #0073d2;
+  padding: 10px 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-options {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 12px;
+  margin-right: 300px;
+}
+
+.account-options span {
+  margin-left: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.account-options span:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: white;
+  opacity: 0.25;
+}
+
+.logo-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.logo {
+  flex: 0 0 auto;
+  margin-left: 160px;
+  margin-right: 130px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 550px;
+  margin-right: 10px;
+  margin-left: 100px;
+}
+
+.search-bar input {
+  padding: 5px;
+  flex-grow: 1;
+  border: none;
+}
+
+.search-bar .categories {
+  padding: 5px;
+  margin-right: 10px;
+  border: none;
+  width: 140px;
+}
+
+.search-bar .categories option {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  background-color: yellow;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.nav-bar {
+  background-color: #005bb5;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.nav-bar a,
+.nav-bar .offer {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.nav-bar a:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -10px;
+  color: white;
+  opacity: 0.5;
+}
+
+.nav-bar .tag {
+  font-size: 10px;
+  background-color: red;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.nav-bar .tag.hot {
+  background-color: #ff4b4b;
+}
+
+.nav-bar .tag.new {
+  background-color: #ffcc00;
+  color: black;
+}
+
+.offer {
+  background-color: #005bb5;
+  color: yellow;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.cart-icon {
+  position: relative;
+  padding: 10px;
+  background-color: #005bb5;
+  border-radius: 5px 0 0 5px;
+  font-size: 10px;
+  height: 20px;
+}
+
+.cart-icon i {
+  font-size: 16px;
+}
+
+.cart-icon .cart-count {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: yellow;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.cart-info {
+  background-color: #005bb5;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  white-space: nowrap;
+  font-size: 11px;
+  height: 20px;
+}
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-dropdown a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+
+.user-dropdown a:hover {
+  background-color: #f5f5f5;
+}
+
+.user-dropdown a:last-child {
+  border-bottom: none;
+}
+
+.category-content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 160px;
+
+}
+.category-sidebar{
+  background-color: #ffffff;
+  padding: 0 18px;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.107);
+  border-radius: 4px;
+}
+/* Định dạng cho thành phần danh mục */
+/* Add this CSS to your existing CSS file */
+.c-categories {
+  margin: 0 auto;
+}
+.c-categories h3 {
+  color: #005bb5;
+}
+.category-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-item {
+  position: relative;
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+.category-item .subcategory-list li.selected {
+  font-weight: bold;
+  color: #000;
+}
+
+.toggle-icon {
+  cursor: pointer;
+}
+
+
+
+.category-name {
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  color: #666666;
+}
+.category-name.selected {
+  color: #000000; /* Màu đậm hơn khi được chọn */
+}
+.toggle-icon {
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subcategory-list {
+  display: none;
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.subcategory-list.active {
+  display: block;
+}
+
+.subcategory-list li {
+  padding: 5px 0;
+  font-size: 12px;
+  color: #666666; /* Giảm độ đậm của các mục con */
+}
+
+.price-slider-container {
+  margin-top: 40px;
+}
+.price-slider-container h3{
+  margin-top: 40px;
+  color: #005bb5;
+}
+
+.price-values {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.price-min, .price-max {
+  font-size: 16px;
+  color: #f00;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slider input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 5px;
+  background: #ddd;
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.7;
+  position: absolute;
+  pointer-events: none;
+}
+
+.slider input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #0073d2;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.slider input[type="range"]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #0073d2;
+  border-radius: 50%;
+  cursor: pointer;
+  pointer-events: all;
+  position: relative;
+  z-index: 1;
+}
+
+.show-now {
+  padding: 10px 20px;
+  background-color: #0073d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.show-now:hover {
+  background-color: #005bb5;
+}
+
+
+
+.category-item.active .toggle-icon {
+  content: "-";
+}
+
+.category-main-content{
+  background-color: #ffffff;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.107);
+  border-radius: 4px;
+}
+.category-toolbar {
+  padding: 10px 0px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.category-toolbar .view-options a.active {
+  font-weight: bold;
+}
+
+.category-toolbar .sort-options {
+  display: flex;
+  align-items: center;
+}
+
+.category-toolbar .sort-options label,
+.category-toolbar .sort-options select {
+  margin-right: 10px;
+}
+
+.category-toolbar .pagination {
+  display: flex;
+  align-items: center;
+}
+
+.category-toolbar .pagination a {
+  margin: 0 5px;
+  color: #0073d2;
+  text-decoration: none;
+}
+
+.category-list-product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 18px;
+}
+
+.category-list-product.category-grid .category-product-item {
+  flex: 1 0 21%;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.category-product-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  padding: 10px 0;
+}
+
+.product-details h3 {
+  font-size: 16px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.product-details .rating span {
+  font-size: 14px;
+  color: #f39c12;
+}
+
+.product-details p {
+  font-size: 14px;
+  color: #777;
+  margin: 10px 0;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.current-price {
+  font-size: 18px;
+  color: #0073d2;
+}
+
+.original-price {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.add-to-cart,
+.wishlist {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0073d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.add-to-cart:hover,
+.wishlist:hover {
+  background-color: #005bb5;
+}
+
+.add-to-cart i,
+.wishlist i {
+  margin-right: 5px;
+}
